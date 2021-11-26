@@ -33,22 +33,48 @@ function validateNum(numValue) {
 }
 //
 function isInRange(text){
+    if ((Number(text)>=1) && (Number(text)<=25))
+    {
+        return true;
+    }
     return false;
 }
 //
 function hasForbidenWord(text) {    
+    let forbidenWords = ['sex','porn','violence','murder'];
+    let str = text;
+    for (let x of forbidenWords)
+    {
+        if (str.includes(x))
+        {
+            return true;   
+        }
+    }
     return false;
 }
 // 
-function hasATooLongWord(text) {    
+function hasATooLongWord(text) {   
+    if (text.length>10)
+    {
+        return true;
+    } 
     return false;
 }
 //
 function hasChar(text) {
+    if ((text!=="") && (text!==undefined) && (text!==" "))
+    {
+        return true;
+    }
     return false;
 }
 //
 function isNumber(text) {
+    let str = text; 
+    if ((typeof(text)=="number") || ((!isNaN(parseFloat(text))) && (!isNaN(text - 0))))// (!isNaN(parseFloat(text))) && (!isNaN(text)))
+    {
+        return true;
+    }
     return false;
 }
 //Please , don't remove the following code 
