@@ -70,7 +70,7 @@ function hasChar(text) {
 }
 //
 function isNumber(text) {
-    if ((typeof(text)=="number") || ((!isNaN(parseFloat(text))) && (!isNaN(text - 0))))// (!isNaN(parseFloat(text))) && (!isNaN(text)))
+    if ((typeof(text)=="number") || ((!isNaN(parseFloat(text))) && (!isNaN(text - 0))))
     {
         return true;
     }
